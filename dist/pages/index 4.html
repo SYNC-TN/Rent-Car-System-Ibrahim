@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renting a car</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style 4.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navdiv">
+          <img src="logo_car-removebg-preview.png" id="image" />
+          <div class="logo"><a href="#">CarService</a></div>
+          <ul>
+            <li><a href="#" class="nav-link">Home</a></li>
+            <li onclick="document.getElementById('research').scrollIntoView()">
+              <a href="#" class="nav-link">Cars</a>
+            </li>
+            <li><a href="service.html" class="nav-link">Service</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <input type="text" placeholder="Search mark" class="search-input" />
+            <button class="signin-btn"><a href="#">SignIn</a></button>
+          </ul>
+        </div>
+      </nav>
+      <div class="background">
+        <img src="obi-pixel9propics-JIcR3-O8ko8-unsplash (1).jpg" />
+        <div class="overlay"></div>
+      </div>
+    </header>
+    <div class="middle">
+      <div class="text">
+        <h4>Here you can</h4>
+        <h1>
+          <span>Choose to</span><br />
+          drive
+        </h1>
+        <em><p>Real Poise,Real Performance,Real Security</p></em>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="section-title" id="research">Research By Type</h2>
+      <div class="vehicle-types">
+        <div class="type-card" data-type="ev">
+          <img src="elv.jpg" alt="Electric Vehicle" />
+          <div class="range-details">
+            <h3>EV</h3>
+            <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="type-card" data-type="suv">
+          <img src="suv 2.jpg" alt="SUV" />
+          <div class="range-details">
+            <h3>SUV</h3>
+            <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="type-card" data-type="truck">
+          <img src="truckC.jpg" alt="Truck" />
+          <div class="range-details">
+            <h3>Truck</h3>
+            <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="type-card" data-type="sedan">
+          <img src="sedan 2.jpg" alt="Sedan" />
+          <div class="range-details">
+            <h3>Sedan</h3>
+            <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="type-card" data-type="hybrid">
+          <img src="hybrid 2.jpg" alt="Hybrid" />
+          <div class="range-details">
+            <h3>Hybrid</h3>
+            <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div id="carListings" class="car-listings"></div>
+    </div>
+
+    <div class="listings-container" id="listingsContainer">
+      <div id="carListings" class="car-listings"></div>
+      <button class="close-button" onclick="closeListings()">Back</button>
+    </div>
+    <!--location section-->
+    <section class="location-container">
+      <div class="location-image">
+        <img src="location.png" alt="location" />
+      </div>
+      <div class="location-content">
+        <h2 class="section-header">FIND CAR IN YOUR LOCATIONS</h2>
+        <p>
+          At CarService, we believe that every journey deserves the perfect car.
+          Whether you're exploring scenic routes, attending a business meeting,
+          or simply running errands, our diverse fleet is ready to meet your
+          needs. From sleek sedans to spacious SUVs and eco-friendly hybrids,
+          our vehicles ensure comfort, reliability, and style.matter where you
+          are, our seamless booking process makes it easy to choose a car that
+          fits your lifestyle. With flexible pickup and drop-off locations,
+          competitive rates, and 24/7 customer support, we guarantee a
+          hassle-free experience tailored to you. Wherever your destination,
+          we’re here to help you get there with ease and confidence. Choose
+          CarService today and let the road lead you to endless possibilities.
+          Your perfect ride is just a click away!
+        </p>
+        <div class="location-btn">
+          <button class="btnl">Find a location</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="select-container">
+      <h2 class="section-header">PICK YOUR DREAM CAR Today</h2>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="select-card">
+              <img src="kia-removebg-preview.png" alt="mahindra" />
+              <div class="select-info">
+                <div class="select-info-card">
+                  <span><i class="ri-speed-up-line"></i></span>
+                  <h4>200 <span>km/h</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="ri-settings-5-line"></i></span>
+                  <h4>6 <span>speed</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="fa-solid fa-car-rear"></i></span>
+                  <h4>5 <span>seats</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="ri-signpost-line"></i></span>
+                  <h4>15 <span>milage</span></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="select-card">
+              <img src="hyndai_i10-removebg-preview.png" alt="hyndai" />
+              <div class="select-info">
+                <div class="select-info-card">
+                  <span><i class="ri-speed-up-line"></i></span>
+                  <h4>215 <span>km/h</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="ri-settings-5-line"></i></span>
+                  <h4>6 <span>speed</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="fa-solid fa-car-rear"></i></span>
+                  <h4>5 <span>seats</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="ri-signpost-line"></i></span>
+                  <h4>16 <span>milage</span></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="select-card">
+              <img src="select-2.png" alt="select" />
+              <div class="select-info">
+                <div class="select-info-card">
+                  <span><i class="ri-speed-up-line"></i></span>
+                  <h4>200 <span>km/h</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="ri-settings-5-line"></i></span>
+                  <h4>6 <span>speed</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="fa-solid fa-car-rear"></i></span>
+                  <h4>5 <span>seats</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="ri-signpost-line"></i></span>
+                  <h4>15 <span>milage</span></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="select-card">
+              <img src="fiat-removebg-preview.png" alt="fiat" />
+              <div class="select-info">
+                <div class="select-info-card">
+                  <span><i class="ri-speed-up-line"></i></span>
+                  <h4>220 <span>km/h</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="ri-settings-5-line"></i></span>
+                  <h4>6 <span>speed</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="fa-solid fa-car-rear"></i></span>
+                  <h4>5 <span>seats</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="ri-signpost-line"></i></span>
+                  <h4>12 <span>milage</span></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="select-card">
+              <img src="clio-removebg-preview.png" alt="clio" />
+              <div class="select-info">
+                <div class="select-info-card">
+                  <span><i class="ri-speed-up-line"></i></span>
+                  <h4>231 <span>km/h</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="ri-settings-5-line"></i></span>
+                  <h4>7 <span>speed</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="fa-solid fa-car-rear"></i></span>
+                  <h4>5 <span>seats</span></h4>
+                </div>
+                <div class="select-info-card">
+                  <span><i class="ri-signpost-line"></i></span>
+                  <h4>14 <span>milage</span></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form action="/" class="select-form">
+        <div class="select-price">
+          <span><i class="ri-price-tag-3-line"></i></span>
+          <div><span id="select-price">89 DT</span> /day</div>
+        </div>
+        <div class="select-btns">
+          <button class="btnl">View Details</button>
+          <button class="btnl">Rent Now</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="banner-container">
+      <div class="banner-wrapper">
+        <img src="banner-1.png" alt="banner" />
+        <img src="banner-2.png" alt="banner" />
+        <img src="banner-3.png" alt="banner" />
+        <img src="banner-4.png" alt="banner" />
+        <img src="banner-5.png" alt="banner" />
+        <img src="banner-6.png" alt="banner" />
+        <img src="banner-7.png" alt="banner" />
+        <img src="banner-8.png" alt="banner" />
+        <img src="banner-9.png" alt="banner" />
+        <img src="banner-10.png" alt="banner" />
+      </div>
+    </section>
+    <!--About section-->
+    <section class="about" id="about">
+      <div class="about-container">
+        <h1>Your Premier Choise for Effortless Car Rentals</h1>
+
+        <div class="about-info">
+          <div class="about-info-item">
+            <hr class="about-hr" />
+            <i class="fa-solid fa-recycle"></i>
+            <h5>Efficency</h5>
+            <p>
+              CarService stands out for its streamlined rental process, ensuring
+              customers can quickly and easily book their desired vehicles.
+            </p>
+          </div>
+          <div class="about-info-item">
+            <hr class="about-hr" />
+            <i class="fa-solid fa-car"></i>
+            <h5>Diverse fleet</h5>
+            <p>
+              CarService boasts a diverse fleet of well-maintained vehicles,
+              catering to the varied needs and preferences of its customers.
+            </p>
+          </div>
+          <div class="about-info-item">
+            <hr class="about-hr" />
+            <i class="fa-solid fa-headset"></i>
+            <h5>Exceptional Service</h5>
+            <p>
+              Beyond just providing vehicles, CarService is committed to
+              delivering exceptional customer service at every touchpoint.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="index-footer">
+      <div class="callout">
+        <h2>
+          Let's drive with <em><span class="decor">CarService</span></em> Today
+          !
+        </h2>
+        <p class="callout-description">
+          Need assistance or ready to reserve your wheels? Contact us now for
+          prompt service and effortless booking!
+        </p>
+        <div class="callout-buttons">
+          <button class="btn" onclick="window.location.href='collection.html'">
+            <p>Check Our Cars</p>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </button>
+
+          <button
+            class="btn-black"
+            onclick="window.location.href='contact.html'"
+          >
+            <p>Book Now</p>
+            <i class="fa-solid fa-right-to-bracket"></i>
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a href="#" class="footer-brand">Car<b class="accent">Service</b></a>
+      </div>
+      <div class="social">
+        <a href="https://facebook.com" class="social-item">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com" class="social-item">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://youtube.com" class="social-item">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://instagram.com" class="social-item">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      <button id="back-to-top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up">Back to top</i>
+      </button>
+    </footer>
+    <script src="../../assets/vendor/aos/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script 3.js"></script>
+  </body>
+</html>
